@@ -1,3 +1,27 @@
 #game{
     display: none;
 }
+
+.circle{
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    display: none;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+}
+#circle-1{
+    display: block;
+}
+
+#seconds-bar{
+    position: absolute;
+    background-color: blue;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 10px;
+    z-index: 999;
+}
