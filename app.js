@@ -1,10 +1,21 @@
 const app = {
     init: function(){
-        const header = document.createElement('h1');
-        header.textContent = 'Hello Game';
+        const intro = document.getElementById('intro');
+        const game = document.getElementById('game');
+        const countdown = document.getElementById('countdown');
+        const countdownStart = 5;
+        let countdownCurrent = countdownStart;
 
-        const body = document.getElementsByTagName('body')[0];
-        body.appendChild(header);
+        const countdownInterval = setInterval(function(){
+            if(countdownCurrent){
+                countdown.innerText = countdownCurrent;
+                countdownCurrent--;
+            }else{
+                clearInterval(countdownInterval);
+                intro.style.display = 'none';
+                game.style.display = 'block';
+            }
+        }, 1000);
     }
 };
 
