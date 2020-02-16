@@ -8,11 +8,14 @@ const app = {
     circles: 20,
     circlesHit: 0,
 
-    secondsToBeat: 10,
+    secondsToBeat: 20,
     secondsTaken: 0,
     secondsBar: document.getElementById('seconds-bar'),
 
     init: function(){
+        const circlesEl = document.getElementById('circles');
+        circlesEl.innerText = app.circles;
+
         const secondsToBeatEl = document.getElementById('seconds-to-beat');
         secondsToBeatEl.innerText = app.secondsToBeat;
 
