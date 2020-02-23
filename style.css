@@ -1,5 +1,5 @@
 *:focus{
-    outline: none;
+    -webkit-tap-highlight-color: rgb(218, 27, 96, 0.8);
 }
 
 body{
