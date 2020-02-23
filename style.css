@@ -1,3 +1,8 @@
+body{
+    background-color: #eee;
+    overflow: hidden;
+}
+
 #game{
     display: none;
 }
