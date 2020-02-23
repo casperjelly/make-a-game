@@ -12,6 +12,10 @@
             <p id="game-begins"></p>
             <div id="seconds-bar"></div>
         </div>
-        <script src="app.js"></script>
+        <script>
+            var script = document.createElement('script');
+            script.src = 'app.js?' + Date.now();
+            document.head.appendChild(script);
+        </script>
     </body>
 </html>
