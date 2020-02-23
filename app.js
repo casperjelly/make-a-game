@@ -1,7 +1,7 @@
 const app = {
     body: document.getElementsByTagName('body')[0],
 
-    gameBeginsCountdown: 10,
+    gameBeginsCountdown: 1,
 
     circleSize: 200,
 
@@ -103,6 +103,9 @@ const app = {
         if(app.audioContext !== undefined) {
             app.oscillator = app.audioContext.createOscillator();
             app.oscillator.connect(app.audioContext.destination);
+            if(app.oscillator.noteOn){
+                app.oscillator.start = app.oscillator.noteOn;
+            }
             app.oscillator.start(app.audioContext.currentTime);
             app.oscillator.stop(app.audioContext.currentTime + 0.1);
         }
