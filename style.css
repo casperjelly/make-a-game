@@ -1,9 +1,9 @@
 *:focus{
-    -webkit-tap-highlight-color: rgb(218, 27, 96, 0.8);
+    -webkit-tap-highlight-color: transparent;
 }
 
 body{
-    background-color: #eee;
+    background-color: #ddd;
     overflow: hidden;
 }
 
