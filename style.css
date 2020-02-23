@@ -27,7 +27,7 @@ body{
 
 #seconds-bar{
     position: absolute;
-    background-color: black;
+    background-color: blue;
     left: 0;
     right: 0;
     top: 0;

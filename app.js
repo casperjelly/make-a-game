@@ -39,7 +39,6 @@ const app = {
             x = Math.floor(Math.random() * 100);
             y = Math.floor(Math.random() * 100);
             size = app.circleSize - ((app.circleSize / 2) * (i / app.circles));
-            console.log(size);
 
             circleEl = document.createElement('div');
             circleEl.id = 'circle-' + i;
