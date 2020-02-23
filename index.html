@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Make-a-Game</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div id="intro">
@@ -13,9 +12,15 @@
             <div id="seconds-bar"></div>
         </div>
         <script>
+            var link = document.createElement('link');
+            link.type = 'text/css';
+            link.rel = 'stylesheet';
+            link.href = 'style.css?' + Date.now();
+            document.head.appendChild(link);
+
             var script = document.createElement('script');
             script.src = 'app.js?' + Date.now();
-            document.head.appendChild(script);
+            document.body.appendChild(script);
         </script>
     </body>
 </html>
