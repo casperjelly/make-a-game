@@ -8,7 +8,7 @@ const app = {
     circles: 20,
     circlesHit: 0,
 
-    secondsToBeat: 20,
+    secondsToBeat: 30,
     secondsTaken: 0,
     secondsBar: document.getElementById('seconds-bar'),
 
