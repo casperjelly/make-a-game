@@ -13,6 +13,8 @@ const app = {
     secondsBar: document.getElementById('seconds-bar'),
 
     init: function(){
+        app.audioInit();
+
         const circlesEl = document.getElementById('circles');
         circlesEl.innerText = app.circles;
 
@@ -54,6 +56,8 @@ const app = {
             circleEl.innerText = i;
 
             circleEl.addEventListener('click', function(ev){
+                app.playSound();
+
                 app.circlesHit++;
                 ev.target.remove();
 
@@ -82,6 +86,26 @@ const app = {
     end: function(win){
         const result = 'You ' + (win ? 'won' : 'lose') + '!';
         app.body.innerText = result;
+    },
+
+    ///
+
+    audioContext: null,
+    oscillator: null,
+    audioInit: function(){
+        try{
+            app.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        }catch(error){
+            window.alert(`Audio disable (browser doesn't support Web Audio API)`);
+        }
+    },
+    playSound(){
+        if(app.audioContext !== undefined) {
+            app.oscillator = app.audioContext.createOscillator();
+            app.oscillator.connect(app.audioContext.destination);
+            app.oscillator.start(app.audioContext.currentTime);
+            app.oscillator.stop(app.audioContext.currentTime + 0.1);
+        }
     }
 };
 
