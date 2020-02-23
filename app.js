@@ -1,7 +1,7 @@
 const app = {
     body: document.getElementsByTagName('body')[0],
 
-    gameBeginsCountdown: 1,
+    gameBeginsCountdown: 5,
 
     circleSize: 200,
 
